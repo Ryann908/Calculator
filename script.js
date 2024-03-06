@@ -13,7 +13,11 @@ function multiply(a, b){
 }
 
 function divide(a, b){
+    if (parseInt(b) !== 0){
     return parseInt(a) / parseInt(b);
+    } else {
+        return "undefined";
+    }
 }
 const calc = document.getElementById("calc");
 const displayValue = document.getElementById("screen");
@@ -36,10 +40,6 @@ for(let i = 0;i < 10; i++){
         displayValue.textContent += i;
     });  
 }
-
-
-
-
 
 button5.addEventListener('click', () => {
     if (displayValue.innerText.includes("+") == false) {
